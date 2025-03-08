@@ -1,0 +1,7 @@
+{
+    "1": { "nome": "Governança", "peso": 30, "max_pontos": 19 },
+    "2": { "nome": "Coleta e Tratamento de Dados", "peso": 25, "max_pontos": 19 },
+    "3": { "nome": "Segurança e Controle de Acesso", "peso": 20, "max_pontos": 20 },
+    "4": { "nome": "Tempo de Retenção e Exclusão de Dados", "peso": 15, "max_pontos": 15 },
+    "5": { "nome": "Relacionamento com Titulares dos Dados", "peso": 10, "max_pontos": 14 }
+}

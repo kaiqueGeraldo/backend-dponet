@@ -1,0 +1,232 @@
+[
+  {
+    "id": 1,
+    "pilar_id": 1,
+    "pergunta": "Sua empresa possui um DPO (Encarregado de Dados)?",
+    "opcoes": [
+      { "resposta": "Sim", "pontos": 0 },
+      { "resposta": "Não, mas estamos planejando", "pontos": 2 },
+      { "resposta": "Não", "pontos": 5 }
+    ]
+  },
+  {
+    "id": 2,
+    "pilar_id": 1,
+    "pergunta": "Sua empresa possui uma política formal de proteção de dados?",
+    "opcoes": [
+      { "resposta": "Sim, documentada e aplicada", "pontos": 0 },
+      { "resposta": "Sim, mas não está totalmente aplicada", "pontos": 2 },
+      { "resposta": "Não", "pontos": 4 }
+    ]
+  },
+  {
+    "id": 3,
+    "pilar_id": 1,
+    "pergunta": "Os funcionários recebem treinamento sobre LGPD regularmente?",
+    "opcoes": [
+      { "resposta": "Sim, anualmente ou com mais frequência", "pontos": 0 },
+      { "resposta": "Sim, mas de forma esporádica", "pontos": 2 },
+      { "resposta": "Não", "pontos": 3 }
+    ]
+  },
+  {
+    "id": 4,
+    "pilar_id": 1,
+    "pergunta": "A empresa já realizou uma auditoria de conformidade com LGPD?",
+    "opcoes": [
+      { "resposta": "Sim, nos últimos 12 meses", "pontos": 0 },
+      { "resposta": "Sim, mas há mais de um ano", "pontos": 2 },
+      { "resposta": "Não", "pontos": 4 }
+    ]
+  },
+  {
+    "id": 5,
+    "pilar_id": 1,
+    "pergunta": "Existe um plano de ação caso ocorra um vazamento de dados?",
+    "opcoes": [
+      { "resposta": "Sim, documentado e testado", "pontos": 0 },
+      { "resposta": "Sim, mas nunca foi testado", "pontos": 2 },
+      { "resposta": "Não", "pontos": 5 }
+    ]
+  },
+  {
+    "id": 6,
+    "pilar_id": 2,
+    "pergunta": "A empresa coleta apenas os dados estritamente necessários para o serviço prestado?",
+    "opcoes": [
+      { "resposta": "Sim, sempre", "pontos": 0 },
+      { "resposta": "Na maioria dos casos", "pontos": 2 },
+      { "resposta": "Não", "pontos": 4 }
+    ]
+  },
+  {
+    "id": 7,
+    "pilar_id": 2,
+    "pergunta": "O consentimento dos usuários é coletado de forma clara e específica?",
+    "opcoes": [
+      { "resposta": "Sim, de maneira transparente", "pontos": 0 },
+      { "resposta": "Sim, mas pode ser melhorado", "pontos": 2 },
+      { "resposta": "Não", "pontos": 4 }
+    ]
+  },
+  {
+    "id": 8,
+    "pilar_id": 2,
+    "pergunta": "Existe uma política para tratar dados sensíveis (saúde, biometria, etc.)?",
+    "opcoes": [
+      { "resposta": "Sim, documentada e aplicada", "pontos": 0 },
+      { "resposta": "Sim, mas não está totalmente aplicada", "pontos": 2 },
+      { "resposta": "Não", "pontos": 5 }
+    ]
+  },
+  {
+    "id": 9,
+    "pilar_id": 2,
+    "pergunta": "A empresa compartilha dados com terceiros?",
+    "opcoes": [
+      { "resposta": "Não, nunca", "pontos": 0 },
+      { "resposta": "Sim, mas apenas com parceiros autorizados", "pontos": 2 },
+      { "resposta": "Sim, sem restrições", "pontos": 3 }
+    ]
+  },
+  {
+    "id": 10,
+    "pilar_id": 2,
+    "pergunta": "O usuário tem a opção de visualizar e corrigir seus dados?",
+    "opcoes": [
+      { "resposta": "Sim, facilmente acessível", "pontos": 0 },
+      { "resposta": "Sim, mas com algumas dificuldades", "pontos": 2 },
+      { "resposta": "Não", "pontos": 3 }
+    ]
+  },
+  {
+    "id": 11,
+    "pilar_id": 3,
+    "pergunta": "A empresa tem medidas de segurança para evitar vazamentos de dados?",
+    "opcoes": [
+      { "resposta": "Sim, bem definidas e aplicadas", "pontos": 0 },
+      { "resposta": "Sim, mas precisam de melhorias", "pontos": 2 },
+      { "resposta": "Não", "pontos": 5 }
+    ]
+  },
+  {
+    "id": 12,
+    "pilar_id": 3,
+    "pergunta": "Os dados dos clientes são armazenados de forma criptografada?",
+    "opcoes": [
+      { "resposta": "Sim, para todos os dados", "pontos": 0 },
+      { "resposta": "Parcialmente", "pontos": 2 },
+      { "resposta": "Não", "pontos": 4 }
+    ]
+  },
+  {
+    "id": 13,
+    "pilar_id": 3,
+    "pergunta": "O acesso aos dados é restrito apenas a funcionários autorizados?",
+    "opcoes": [
+      { "resposta": "Sim, totalmente controlado", "pontos": 0 },
+      { "resposta": "Parcialmente", "pontos": 2 },
+      { "resposta": "Não", "pontos": 4 }
+    ]
+  },
+  {
+    "id": 14,
+    "pilar_id": 3,
+    "pergunta": "Há monitoramento de acessos e tentativas de violação?",
+    "opcoes": [
+      { "resposta": "Sim, monitoramento contínuo", "pontos": 0 },
+      { "resposta": "Sim, mas não contínuo", "pontos": 2 },
+      { "resposta": "Não", "pontos": 4 }
+    ]
+  },
+  {
+    "id": 15,
+    "pilar_id": 3,
+    "pergunta": "A empresa realiza testes periódicos de segurança (pentest)?",
+    "opcoes": [
+      { "resposta": "Sim, regularmente", "pontos": 0 },
+      { "resposta": "Sim, mas sem frequência definida", "pontos": 2 },
+      { "resposta": "Não", "pontos": 3 }
+    ]
+  },
+  {
+    "id": 16,
+    "pilar_id": 4,
+    "pergunta": "A empresa possui uma política clara sobre o tempo de retenção de dados?",
+    "opcoes": [
+      { "resposta": "Sim, bem definida", "pontos": 0 },
+      { "resposta": "Sim, mas precisa de melhorias", "pontos": 2 },
+      { "resposta": "Não", "pontos": 4 }
+    ]
+  },
+  {
+    "id": 17,
+    "pilar_id": 4,
+    "pergunta": "Os usuários podem solicitar a exclusão de seus dados facilmente?",
+    "opcoes": [
+      { "resposta": "Sim, de forma simples", "pontos": 0 },
+      { "resposta": "Sim, mas com dificuldades", "pontos": 2 },
+      { "resposta": "Não", "pontos": 4 }
+    ]
+  },
+  {
+    "id": 18,
+    "pilar_id": 4,
+    "pergunta": "A empresa tem um processo seguro para descartar dados antigos?",
+    "opcoes": [
+      { "resposta": "Sim, documentado e aplicado", "pontos": 0 },
+      { "resposta": "Sim, mas precisa de melhorias", "pontos": 2 },
+      { "resposta": "Não", "pontos": 4 }
+    ]
+  },
+  {
+    "id": 19,
+    "pilar_id": 4,
+    "pergunta": "Os backups de dados são protegidos e excluídos corretamente?",
+    "opcoes": [
+      { "resposta": "Sim, totalmente controlado", "pontos": 0 },
+      { "resposta": "Parcialmente", "pontos": 2 },
+      { "resposta": "Não", "pontos": 3 }
+    ]
+  },
+  {
+    "id": 20,
+    "pilar_id": 5,
+    "pergunta": "Existe um canal de atendimento para que os usuários consultem seus dados?",
+    "opcoes": [
+      { "resposta": "Sim, acessível e eficiente", "pontos": 0 },
+      { "resposta": "Sim, mas com dificuldades", "pontos": 2 },
+      { "resposta": "Não", "pontos": 3 }
+    ]
+  },
+  {
+    "id": 21,
+    "pilar_id": 5,
+    "pergunta": "A empresa já recebeu reclamações sobre uso indevido de dados?",
+    "opcoes": [
+      { "resposta": "Não, nunca houve reclamações", "pontos": 0 },
+      { "resposta": "Sim, mas foram resolvidas rapidamente", "pontos": 2 },
+      { "resposta": "Sim, e continuam pendentes", "pontos": 3 }
+    ]
+  },
+  {
+    "id": 22,
+    "pilar_id": 5,
+    "pergunta": "A empresa responde solicitações de titulares dentro do prazo da LGPD?",
+    "opcoes": [
+      { "resposta": "Sim, sempre dentro do prazo", "pontos": 0 },
+      { "resposta": "Na maioria das vezes, mas pode atrasar", "pontos": 2 },
+      { "resposta": "Não, frequentemente há atrasos", "pontos": 3 }
+    ]
+  },
+  {
+    "id": 23,
+    "pilar_id": 5,
+    "pergunta": "Há um histórico de penalizações ou advertências por não cumprir a LGPD?",
+    "opcoes": [
+      { "resposta": "Não, nunca houve penalizações", "pontos": 0 },
+      { "resposta": "Sim, mas foram resolvidas", "pontos": 2 },
+      { "resposta": "Sim, ainda há pendências", "pontos": 5 }
+    ]
+  }
+]
