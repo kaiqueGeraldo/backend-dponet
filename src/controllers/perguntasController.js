@@ -10,7 +10,7 @@ exports.getTodasPerguntas = (req, res) => {
 exports.getPerguntaAtual = (req, res) => {
     if (!req.session.perguntaIndex) {
         req.session.perguntaIndex = 0;
-        req.session.respostas = []; // Garante que respostas seja um array
+        req.session.respostas = [];
     }
 
     const index = req.session.perguntaIndex;
@@ -26,7 +26,6 @@ exports.getPerguntaAtual = (req, res) => {
 exports.responderPergunta = (req, res) => {
     const { resposta } = req.body;
 
-    // Se a sessão não estiver inicializada, inicializa corretamente
     if (typeof req.session.perguntaIndex === "undefined") {
         req.session.perguntaIndex = 0;
         req.session.respostas = [];
@@ -34,7 +33,6 @@ exports.responderPergunta = (req, res) => {
 
     const index = req.session.perguntaIndex;
 
-    // Garante que a pergunta existe antes de tentar acessar
     if (!perguntas || !perguntas[index]) {
         console.error("Erro: Pergunta não encontrada no índice", index);
         return res.status(500).json({ mensagem: "Erro interno: pergunta não encontrada." });
@@ -42,19 +40,23 @@ exports.responderPergunta = (req, res) => {
 
     console.log("Recebida resposta:", resposta);
     console.log("Pergunta ID:", perguntas[index].id);
+    console.log("Índice da sessão antes:", req.session.perguntaIndex);
 
+    // Salvar a resposta da pergunta
     req.session.respostas.push({ pergunta_id: perguntas[index].id, resposta });
 
-    // Atualiza o índice corretamente
     req.session.perguntaIndex++;
 
-    // Salva explicitamente a sessão antes de responder
+    console.log("Índice da sessão depois:", req.session.perguntaIndex);
+    console.log("respostas lenght:", req.session.respostas.length);
+
     req.session.save((err) => {
         if (err) {
             console.error("Erro ao salvar sessão:", err);
             return res.status(500).json({ mensagem: "Erro ao salvar progresso da sessão." });
         }
 
+        // Verifica se há mais perguntas
         if (req.session.perguntaIndex < perguntas.length) {
             res.json({ proximaPergunta: perguntas[req.session.perguntaIndex] });
         } else {
@@ -65,18 +67,29 @@ exports.responderPergunta = (req, res) => {
 
 // Calcula o resultado final após todas as respostas
 exports.calcularResultado = (req, res) => {
+    // Verificar se as respostas existem e o número de respostas é igual ao número total de perguntas
     if (!req.session.respostas || req.session.respostas.length < perguntas.length) {
         return res.status(400).json({ mensagem: "Ainda há perguntas pendentes." });
     }
 
-    // Converter objeto de respostas da sessão para um array de respostas
     const respostasArray = req.session.respostas;
 
-    const resultado = calcularPontuacao(respostasArray);
+    console.log("Calculando resultado...");
 
-    // Reseta a sessão após calcular o resultado
-    req.session.destroy();
+    // Adiciona um atraso de 1 segundo (1000ms) antes de calcular o resultado
+    setTimeout(() => {
+        const resultado = calcularPontuacao(respostasArray);
 
-    res.json({ resultado });
+        // Destruir a sessão após calcular o resultado
+        req.session.destroy((err) => {
+            if (err) {
+                console.error("Erro ao destruir sessão:", err);
+                return res.status(500).json({ mensagem: "Erro ao finalizar a sessão." });
+            }
+
+            // Retornar o resultado final
+            res.json({ resultado });
+        });
+    }, 500);  // Delay de 1 segundo para testar
 };
 
