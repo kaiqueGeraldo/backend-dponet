@@ -5,8 +5,16 @@
     "pergunta": "Sua empresa possui um DPO (Encarregado de Dados)?",
     "opcoes": [
       { "resposta": "Sim", "pontos": 0 },
-      { "resposta": "Não, mas estamos planejando", "pontos": 2 },
-      { "resposta": "Não", "pontos": 5 }
+      {
+        "resposta": "Não, mas estamos planejando",
+        "pontos": 2,
+        "melhoria": "Finalize o planejamento para a nomeação de um DPO e estabeleça um prazo definido."
+      },
+      {
+        "resposta": "Não",
+        "pontos": 5,
+        "melhoria": "Contrate ou designe um DPO para garantir conformidade com a LGPD."
+      }
     ]
   },
   {
@@ -15,8 +23,16 @@
     "pergunta": "Sua empresa possui uma política formal de proteção de dados?",
     "opcoes": [
       { "resposta": "Sim, documentada e aplicada", "pontos": 0 },
-      { "resposta": "Sim, mas não está totalmente aplicada", "pontos": 2 },
-      { "resposta": "Não", "pontos": 4 }
+      {
+        "resposta": "Sim, mas não está totalmente aplicada",
+        "pontos": 2,
+        "melhoria": "Garanta que a política de proteção de dados seja aplicada corretamente em toda a empresa."
+      },
+      {
+        "resposta": "Não",
+        "pontos": 4,
+        "melhoria": "Elabore e implemente uma política formal de proteção de dados imediatamente."
+      }
     ]
   },
   {
@@ -25,8 +41,16 @@
     "pergunta": "Os funcionários recebem treinamento sobre LGPD regularmente?",
     "opcoes": [
       { "resposta": "Sim, anualmente ou com mais frequência", "pontos": 0 },
-      { "resposta": "Sim, mas de forma esporádica", "pontos": 2 },
-      { "resposta": "Não", "pontos": 3 }
+      {
+        "resposta": "Sim, mas de forma esporádica",
+        "pontos": 2,
+        "melhoria": "Crie um cronograma de treinamentos regulares sobre LGPD para todos os funcionários."
+      },
+      {
+        "resposta": "Não",
+        "pontos": 3,
+        "melhoria": "Implemente treinamentos obrigatórios para todos os funcionários sobre LGPD."
+      }
     ]
   },
   {
@@ -35,8 +59,16 @@
     "pergunta": "A empresa já realizou uma auditoria de conformidade com LGPD?",
     "opcoes": [
       { "resposta": "Sim, nos últimos 12 meses", "pontos": 0 },
-      { "resposta": "Sim, mas há mais de um ano", "pontos": 2 },
-      { "resposta": "Não", "pontos": 4 }
+      {
+        "resposta": "Sim, mas há mais de um ano",
+        "pontos": 2,
+        "melhoria": "Realize auditorias de conformidade com a LGPD com maior frequência."
+      },
+      {
+        "resposta": "Não",
+        "pontos": 4,
+        "melhoria": "Agende uma auditoria de conformidade com LGPD o mais rápido possível."
+      }
     ]
   },
   {
@@ -45,8 +77,16 @@
     "pergunta": "Existe um plano de ação caso ocorra um vazamento de dados?",
     "opcoes": [
       { "resposta": "Sim, documentado e testado", "pontos": 0 },
-      { "resposta": "Sim, mas nunca foi testado", "pontos": 2 },
-      { "resposta": "Não", "pontos": 5 }
+      {
+        "resposta": "Sim, mas nunca foi testado",
+        "pontos": 2,
+        "melhoria": "Realize testes no plano de ação para verificar sua eficácia em caso de incidentes."
+      },
+      {
+        "resposta": "Não",
+        "pontos": 5,
+        "melhoria": "Crie e teste um plano de ação para resposta a vazamentos de dados."
+      }
     ]
   },
   {
@@ -55,8 +95,16 @@
     "pergunta": "A empresa coleta apenas os dados estritamente necessários para o serviço prestado?",
     "opcoes": [
       { "resposta": "Sim, sempre", "pontos": 0 },
-      { "resposta": "Na maioria dos casos", "pontos": 2 },
-      { "resposta": "Não", "pontos": 4 }
+      {
+        "resposta": "Na maioria dos casos",
+        "pontos": 2,
+        "melhoria": "Reveja as coletas de dados e elimine informações desnecessárias quando possível."
+      },
+      {
+        "resposta": "Não",
+        "pontos": 4,
+        "melhoria": "Restrinja a coleta de dados ao estritamente necessário para a prestação do serviço."
+      }
     ]
   },
   {
@@ -65,8 +113,16 @@
     "pergunta": "O consentimento dos usuários é coletado de forma clara e específica?",
     "opcoes": [
       { "resposta": "Sim, de maneira transparente", "pontos": 0 },
-      { "resposta": "Sim, mas pode ser melhorado", "pontos": 2 },
-      { "resposta": "Não", "pontos": 4 }
+      {
+        "resposta": "Sim, mas pode ser melhorado",
+        "pontos": 2,
+        "melhoria": "Torne a comunicação do consentimento dos usuários mais clara e objetiva."
+      },
+      {
+        "resposta": "Não",
+        "pontos": 4,
+        "melhoria": "Reformule o processo de consentimento para garantir transparência total."
+      }
     ]
   },
   {
@@ -75,8 +131,16 @@
     "pergunta": "Existe uma política para tratar dados sensíveis (saúde, biometria, etc.)?",
     "opcoes": [
       { "resposta": "Sim, documentada e aplicada", "pontos": 0 },
-      { "resposta": "Sim, mas não está totalmente aplicada", "pontos": 2 },
-      { "resposta": "Não", "pontos": 5 }
+      {
+        "resposta": "Sim, mas não está totalmente aplicada",
+        "pontos": 2,
+        "melhoria": "Reforce a aplicação da política de tratamento de dados sensíveis na empresa."
+      },
+      {
+        "resposta": "Não",
+        "pontos": 5,
+        "melhoria": "Crie e implemente uma política de tratamento de dados sensíveis."
+      }
     ]
   },
   {
@@ -85,8 +149,16 @@
     "pergunta": "A empresa compartilha dados com terceiros?",
     "opcoes": [
       { "resposta": "Não, nunca", "pontos": 0 },
-      { "resposta": "Sim, mas apenas com parceiros autorizados", "pontos": 2 },
-      { "resposta": "Sim, sem restrições", "pontos": 3 }
+      {
+        "resposta": "Sim, mas apenas com parceiros autorizados",
+        "pontos": 2,
+        "melhoria": "Garanta que os parceiros autorizados atendam às exigências da LGPD."
+      },
+      {
+        "resposta": "Sim, sem restrições",
+        "pontos": 3,
+        "melhoria": "Estabeleça regras claras para compartilhamento de dados com terceiros."
+      }
     ]
   },
   {
@@ -95,8 +167,16 @@
     "pergunta": "O usuário tem a opção de visualizar e corrigir seus dados?",
     "opcoes": [
       { "resposta": "Sim, facilmente acessível", "pontos": 0 },
-      { "resposta": "Sim, mas com algumas dificuldades", "pontos": 2 },
-      { "resposta": "Não", "pontos": 3 }
+      {
+        "resposta": "Sim, mas com algumas dificuldades",
+        "pontos": 2,
+        "melhoria": "Facilite o processo para que usuários possam visualizar e corrigir seus dados."
+      },
+      {
+        "resposta": "Não",
+        "pontos": 3,
+        "melhoria": "Implemente um sistema que permita aos usuários editar seus dados facilmente."
+      }
     ]
   },
   {
@@ -105,8 +185,16 @@
     "pergunta": "A empresa tem medidas de segurança para evitar vazamentos de dados?",
     "opcoes": [
       { "resposta": "Sim, bem definidas e aplicadas", "pontos": 0 },
-      { "resposta": "Sim, mas precisam de melhorias", "pontos": 2 },
-      { "resposta": "Não", "pontos": 5 }
+      {
+        "resposta": "Sim, mas precisam de melhorias",
+        "pontos": 2,
+        "melhoria": "Reforce e documente as medidas de segurança já existentes."
+      },
+      {
+        "resposta": "Não",
+        "pontos": 5,
+        "melhoria": "Implemente medidas de segurança para evitar vazamentos de dados."
+      }
     ]
   },
   {
@@ -115,8 +203,16 @@
     "pergunta": "Os dados dos clientes são armazenados de forma criptografada?",
     "opcoes": [
       { "resposta": "Sim, para todos os dados", "pontos": 0 },
-      { "resposta": "Parcialmente", "pontos": 2 },
-      { "resposta": "Não", "pontos": 4 }
+      {
+        "resposta": "Parcialmente",
+        "pontos": 2,
+        "melhoria": "Amplie a criptografia para abranger todos os dados armazenados."
+      },
+      {
+        "resposta": "Não",
+        "pontos": 4,
+        "melhoria": "Criptografe os dados sensíveis para garantir maior proteção."
+      }
     ]
   },
   {
@@ -125,8 +221,16 @@
     "pergunta": "O acesso aos dados é restrito apenas a funcionários autorizados?",
     "opcoes": [
       { "resposta": "Sim, totalmente controlado", "pontos": 0 },
-      { "resposta": "Parcialmente", "pontos": 2 },
-      { "resposta": "Não", "pontos": 4 }
+      {
+        "resposta": "Parcialmente",
+        "pontos": 2,
+        "melhoria": "Aprimore os controles de acesso e monitore quem pode visualizar os dados."
+      },
+      {
+        "resposta": "Não",
+        "pontos": 4,
+        "melhoria": "Restrinja o acesso aos dados apenas a funcionários autorizados."
+      }
     ]
   },
   {
@@ -135,8 +239,16 @@
     "pergunta": "Há monitoramento de acessos e tentativas de violação?",
     "opcoes": [
       { "resposta": "Sim, monitoramento contínuo", "pontos": 0 },
-      { "resposta": "Sim, mas não contínuo", "pontos": 2 },
-      { "resposta": "Não", "pontos": 4 }
+      {
+        "resposta": "Sim, mas não contínuo",
+        "pontos": 2,
+        "melhoria": "Implemente um monitoramento mais frequente dos acessos aos dados."
+      },
+      {
+        "resposta": "Não",
+        "pontos": 4,
+        "melhoria": "Adote um sistema de monitoramento contínuo para evitar violações."
+      }
     ]
   },
   {
@@ -145,8 +257,16 @@
     "pergunta": "A empresa realiza testes periódicos de segurança (pentest)?",
     "opcoes": [
       { "resposta": "Sim, regularmente", "pontos": 0 },
-      { "resposta": "Sim, mas sem frequência definida", "pontos": 2 },
-      { "resposta": "Não", "pontos": 3 }
+      {
+        "resposta": "Sim, mas sem frequência definida",
+        "pontos": 2,
+        "melhoria": "Defina uma periodicidade fixa para a realização de testes de segurança."
+      },
+      {
+        "resposta": "Não",
+        "pontos": 3,
+        "melhoria": "Implemente testes periódicos de segurança para identificar vulnerabilidades."
+      }
     ]
   },
   {
@@ -155,8 +275,16 @@
     "pergunta": "A empresa possui uma política clara sobre o tempo de retenção de dados?",
     "opcoes": [
       { "resposta": "Sim, bem definida", "pontos": 0 },
-      { "resposta": "Sim, mas precisa de melhorias", "pontos": 2 },
-      { "resposta": "Não", "pontos": 4 }
+      {
+        "resposta": "Sim, mas precisa de melhorias",
+        "pontos": 2,
+        "melhoria": "Refine a política de retenção de dados para garantir conformidade total."
+      },
+      {
+        "resposta": "Não",
+        "pontos": 4,
+        "melhoria": "Crie uma política clara sobre o tempo de retenção de dados."
+      }
     ]
   },
   {
@@ -165,8 +293,16 @@
     "pergunta": "Os usuários podem solicitar a exclusão de seus dados facilmente?",
     "opcoes": [
       { "resposta": "Sim, de forma simples", "pontos": 0 },
-      { "resposta": "Sim, mas com dificuldades", "pontos": 2 },
-      { "resposta": "Não", "pontos": 4 }
+      {
+        "resposta": "Sim, mas com dificuldades",
+        "pontos": 2,
+        "melhoria": "Facilite o processo para que usuários possam solicitar a exclusão de dados."
+      },
+      {
+        "resposta": "Não",
+        "pontos": 4,
+        "melhoria": "Implemente um canal eficiente para exclusão de dados conforme a LGPD."
+      }
     ]
   },
   {
@@ -175,8 +311,16 @@
     "pergunta": "A empresa tem um processo seguro para descartar dados antigos?",
     "opcoes": [
       { "resposta": "Sim, documentado e aplicado", "pontos": 0 },
-      { "resposta": "Sim, mas precisa de melhorias", "pontos": 2 },
-      { "resposta": "Não", "pontos": 4 }
+      {
+        "resposta": "Sim, mas precisa de melhorias",
+        "pontos": 2,
+        "melhoria": "Aprimore os processos existentes para garantir um descarte seguro de dados."
+      },
+      {
+        "resposta": "Não",
+        "pontos": 4,
+        "melhoria": "Implemente um procedimento seguro para descarte de dados antigos."
+      }
     ]
   },
   {
@@ -185,8 +329,16 @@
     "pergunta": "Os backups de dados são protegidos e excluídos corretamente?",
     "opcoes": [
       { "resposta": "Sim, totalmente controlado", "pontos": 0 },
-      { "resposta": "Parcialmente", "pontos": 2 },
-      { "resposta": "Não", "pontos": 3 }
+      {
+        "resposta": "Parcialmente",
+        "pontos": 2,
+        "melhoria": "Melhore os controles sobre backups para garantir sua segurança."
+      },
+      {
+        "resposta": "Não",
+        "pontos": 3,
+        "melhoria": "Proteja e controle a exclusão dos backups de dados corretamente."
+      }
     ]
   },
   {
@@ -195,8 +347,16 @@
     "pergunta": "Existe um canal de atendimento para que os usuários consultem seus dados?",
     "opcoes": [
       { "resposta": "Sim, acessível e eficiente", "pontos": 0 },
-      { "resposta": "Sim, mas com dificuldades", "pontos": 2 },
-      { "resposta": "Não", "pontos": 3 }
+      {
+        "resposta": "Sim, mas com dificuldades",
+        "pontos": 2,
+        "melhoria": "Otimize o canal de atendimento para melhorar o suporte ao usuário."
+      },
+      {
+        "resposta": "Não",
+        "pontos": 3,
+        "melhoria": "Crie um canal de atendimento eficiente para consulta de dados."
+      }
     ]
   },
   {
@@ -205,8 +365,16 @@
     "pergunta": "A empresa já recebeu reclamações sobre uso indevido de dados?",
     "opcoes": [
       { "resposta": "Não, nunca houve reclamações", "pontos": 0 },
-      { "resposta": "Sim, mas foram resolvidas rapidamente", "pontos": 2 },
-      { "resposta": "Sim, e continuam pendentes", "pontos": 3 }
+      {
+        "resposta": "Sim, mas foram resolvidas rapidamente",
+        "pontos": 2,
+        "melhoria": "Estabeleça medidas para evitar novas reclamações sobre uso de dados."
+      },
+      {
+        "resposta": "Sim, e continuam pendentes",
+        "pontos": 3,
+        "melhoria": "Resolva todas as reclamações pendentes sobre uso indevido de dados."
+      }
     ]
   },
   {
@@ -215,8 +383,16 @@
     "pergunta": "A empresa responde solicitações de titulares dentro do prazo da LGPD?",
     "opcoes": [
       { "resposta": "Sim, sempre dentro do prazo", "pontos": 0 },
-      { "resposta": "Na maioria das vezes, mas pode atrasar", "pontos": 2 },
-      { "resposta": "Não, frequentemente há atrasos", "pontos": 3 }
+      {
+        "resposta": "Na maioria das vezes, mas pode atrasar",
+        "pontos": 2,
+        "melhoria": "Melhore a gestão de prazos para responder às solicitações de titulares."
+      },
+      {
+        "resposta": "Não, frequentemente há atrasos",
+        "pontos": 3,
+        "melhoria": "Garanta que todas as solicitações de titulares sejam respondidas no prazo."
+      }
     ]
   },
   {
@@ -225,8 +401,16 @@
     "pergunta": "Há um histórico de penalizações ou advertências por não cumprir a LGPD?",
     "opcoes": [
       { "resposta": "Não, nunca houve penalizações", "pontos": 0 },
-      { "resposta": "Sim, mas foram resolvidas", "pontos": 2 },
-      { "resposta": "Sim, ainda há pendências", "pontos": 5 }
+      {
+        "resposta": "Sim, mas foram resolvidas",
+        "pontos": 2,
+        "melhoria": "Tome medidas para evitar novas penalizações futuras."
+      },
+      {
+        "resposta": "Sim, ainda há pendências",
+        "pontos": 5,
+        "melhoria": "Resolva todas as pendências relacionadas a penalizações da LGPD."
+      }
     ]
   }
 ]

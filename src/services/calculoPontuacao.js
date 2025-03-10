@@ -46,10 +46,16 @@ const calcularPontuacao = (respostas) => {
                     maxPontos: pilar.max_pontos,
                     percentual: 0,
                     mensagem: "",
+                    melhorias: []
                 };
             }
 
             defasagemPorPilar[pilar.nome].defasagem += opcaoEscolhida.pontos;
+
+            // Adicionar sugestões de melhoria diretamente das perguntas
+            if (opcaoEscolhida.melhoria) {
+                defasagemPorPilar[pilar.nome].melhorias.push(opcaoEscolhida.melhoria);
+            }
         });
 
         // Converter os pontos de cada pilar para um percentual de deficiência
