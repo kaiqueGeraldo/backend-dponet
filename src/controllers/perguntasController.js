@@ -67,29 +67,37 @@ exports.responderPergunta = (req, res) => {
 
 // Calcula o resultado final após todas as respostas
 exports.calcularResultado = (req, res) => {
-    // Verificar se as respostas existem e o número de respostas é igual ao número total de perguntas
-    if (!req.session.respostas || req.session.respostas.length < perguntas.length) {
-        return res.status(400).json({ mensagem: "Ainda há perguntas pendentes." });
-    }
+    try {
+        if (!req.session || !req.session.respostas) {
+            return res.status(400).json({ mensagem: "Nenhuma resposta foi encontrada na sessão." });
+        }
 
-    const respostasArray = req.session.respostas;
+        const respostasArray = req.session.respostas;
 
-    console.log("Calculando resultado...");
+        if (!Array.isArray(perguntas) || respostasArray.length < perguntas.length) {
+            return res.status(400).json({ mensagem: "Ainda há perguntas pendentes." });
+        }
 
-    // Adiciona um atraso de 1 segundo (1000ms) antes de calcular o resultado
-    setTimeout(() => {
-        const resultado = calcularPontuacao(respostasArray);
+        console.log("Calculando resultado...");
 
-        // Destruir a sessão após calcular o resultado
-        req.session.destroy((err) => {
-            if (err) {
-                console.error("Erro ao destruir sessão:", err);
-                return res.status(500).json({ mensagem: "Erro ao finalizar a sessão." });
+        setTimeout(() => {
+            const resultado = calcularPontuacao(respostasArray);
+
+            if (resultado.mensagem) {
+                return res.status(400).json({ mensagem: resultado.mensagem });
             }
 
-            // Retornar o resultado final
-            res.json({ resultado });
-        });
-    }, 500);  // Delay de 1 segundo para testar
-};
+            req.session.destroy((err) => {
+                if (err) {
+                    console.error("Erro ao destruir sessão:", err);
+                    return res.status(500).json({ mensagem: "Erro ao finalizar a sessão." });
+                }
 
+                res.json({ resultado });
+            });
+        }, 500);
+    } catch (error) {
+        console.error("Erro ao calcular resultado:", error);
+        res.status(500).json({ mensagem: "Erro interno ao processar a pontuação." });
+    }
+};
