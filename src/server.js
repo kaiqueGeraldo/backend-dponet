@@ -6,7 +6,7 @@ const perguntasRoutes = require('./routes/perguntasRouters');
 const app = express();
 
 app.use(cors({
-  origin: "http://localhost:3002",
+  origin: "http://localhost:3001",
   credentials: true
 }));
 
@@ -21,5 +21,5 @@ app.use(session({
 
 app.use('/api', perguntasRoutes);
 
-const PORT = process.env.PORT || 3000;
+const PORT = process.env.PORT || 3005;
 app.listen(PORT, () => console.log(`Servidor rodando na porta ${PORT}`));

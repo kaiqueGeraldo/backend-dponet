@@ -2,6 +2,7 @@ const calcularPontuacao = (respostas) => {
     let pilares, perguntas;
 
     try {
+        // Carrega os arquivos JSON contendo os pilares e as perguntas
         pilares = require('../data/pilares.json');
         perguntas = require('../data/perguntas.json');
     } catch (error) {
@@ -9,6 +10,7 @@ const calcularPontuacao = (respostas) => {
         return { mensagem: "Erro interno ao processar os dados." };
     }
 
+    // Validações iniciais para garantir que os dados são válidos
     if (!Array.isArray(perguntas) || !respostas || !Array.isArray(respostas)) {
         return { mensagem: "Dados inválidos para o cálculo." };
     }
@@ -16,6 +18,7 @@ const calcularPontuacao = (respostas) => {
     const calcularDefasagemPorPilar = () => {
         const defasagemPorPilar = {};
 
+        // Verifica se todas as perguntas possuem uma resposta
         const todasPerguntasRespondidas = perguntas.every(pergunta =>
             respostas.some(resposta => resposta.pergunta_id === pergunta.id)
         );
@@ -24,6 +27,7 @@ const calcularPontuacao = (respostas) => {
             return { mensagem: "Ainda há perguntas pendentes." };
         }
 
+        // Percorre todas as perguntas para calcular a defasagem por pilar
         perguntas.forEach(pergunta => {
             const pilar = pilares[pergunta.pilar_id];
             if (!pilar || !pergunta.opcoes || !Array.isArray(pergunta.opcoes)) {
@@ -31,15 +35,18 @@ const calcularPontuacao = (respostas) => {
                 return;
             }
 
+            // Obtém a resposta selecionada para a pergunta
             const respostaSelecionada = respostas.find(resposta => resposta.pergunta_id === pergunta.id);
             if (!respostaSelecionada) return;
 
+            // Encontra a opção escolhida dentro da pergunta
             const opcaoEscolhida = pergunta.opcoes.find(opcao => opcao.resposta === respostaSelecionada.resposta);
             if (!opcaoEscolhida || typeof opcaoEscolhida.pontos !== "number") {
                 console.warn(`Opção inválida para a pergunta ID: ${pergunta.id}`);
                 return;
             }
 
+            // Inicializa o pilar caso ele ainda não tenha sido adicionado ao objeto
             if (!defasagemPorPilar[pilar.nome]) {
                 defasagemPorPilar[pilar.nome] = {
                     defasagem: 0,
@@ -50,15 +57,16 @@ const calcularPontuacao = (respostas) => {
                 };
             }
 
+            // Soma a pontuação da resposta ao total do pilar correspondente
             defasagemPorPilar[pilar.nome].defasagem += opcaoEscolhida.pontos;
 
-            // Adicionar sugestões de melhoria diretamente das perguntas
+            // Adiciona sugestões de melhoria caso existam
             if (opcaoEscolhida.melhoria) {
                 defasagemPorPilar[pilar.nome].melhorias.push(opcaoEscolhida.melhoria);
             }
         });
 
-        // Converter os pontos de cada pilar para um percentual de deficiência
+        // Calcula o percentual de deficiência de cada pilar
         Object.keys(defasagemPorPilar).forEach(pilarNome => {
             const pilar = defasagemPorPilar[pilarNome];
             pilar.percentual = ((pilar.defasagem / pilar.maxPontos) * 100).toFixed(2);
@@ -71,6 +79,7 @@ const calcularPontuacao = (respostas) => {
     const calcularDefasagemGeral = (defasagemPorPilar) => {
         let defasagemTotal = 0;
 
+        // Calcula a defasagem total considerando o peso de cada pilar
         for (const pilarNome in defasagemPorPilar) {
             const pilar = Object.values(pilares).find(p => p.nome === pilarNome);
             if (!pilar) continue;
@@ -84,6 +93,7 @@ const calcularPontuacao = (respostas) => {
         return defasagemTotal.toFixed(2);
     };
 
+    // Classifica o risco com base na defasagem total
     const classificarRisco = (defasagemTotal) => {
         if (defasagemTotal == 0) return "Nenhuma deficiência";
         if (defasagemTotal <= 20) return "Defasagem mínima";
@@ -93,6 +103,7 @@ const calcularPontuacao = (respostas) => {
         return "Defasagem crítica";
     };
 
+    // Gera uma mensagem de feedback com base no percentual de deficiência
     const gerarMensagemFeedback = (percentual) => {
         if (percentual == 0) return "Excelente! Nenhuma deficiência identificada.";
         if (percentual <= 20) return "Muito bom! Pequenos ajustes podem ser feitos.";
@@ -102,9 +113,11 @@ const calcularPontuacao = (respostas) => {
         return "Crítico! Esse pilar exige atenção urgente.";
     };
 
+    // Calcula a defasagem por pilar
     const defasagemPorPilar = calcularDefasagemPorPilar();
     if (defasagemPorPilar.mensagem) return defasagemPorPilar;
 
+    // Calcula a defasagem total e classifica o risco
     const defasagemTotal = parseFloat(calcularDefasagemGeral(defasagemPorPilar));
     const risco = classificarRisco(defasagemTotal);
 
